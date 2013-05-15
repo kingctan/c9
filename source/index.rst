@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    intro
+   changelog
    quickstart
    base
    sale
@@ -22,6 +23,7 @@ Contents:
    report
    mobile
    service
+   develop
 
 
 
