@@ -12,8 +12,8 @@ Contents:
    :maxdepth: 2
 
    intro
-   changelog
    quickstart
+   admin
    base
    sale
    purchase
@@ -24,6 +24,8 @@ Contents:
    mobile
    service
    develop
+   changelog
+   todo
 
 
 
