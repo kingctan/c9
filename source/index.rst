@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to c9's documentation!
+C9 文档目录
 ==============================
 
 Contents:
@@ -30,7 +30,7 @@ Contents:
 
 
 
-Indices and tables
+索引及表格
 ===================
 
 * :ref:`genindex`
