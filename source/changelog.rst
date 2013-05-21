@@ -1,6 +1,7 @@
 更新日志
 ------------------------
 
+
 *2013-5-16*
 
 1. 现在可以在model.save falure 回调中在operation中使用responseText了
