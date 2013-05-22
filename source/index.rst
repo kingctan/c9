@@ -20,7 +20,7 @@ Contents:
    store/index
    financial/index
    repair
-   report
+   report/index
    mobile
    service
    aot

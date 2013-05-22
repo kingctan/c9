@@ -8,8 +8,6 @@
 * ubuntu
 * postgresql 9.2
 
-
-
 安装
 ==========================
 
@@ -21,6 +19,15 @@
 * cd c9webserver/ ../bin/python c9webserver/app.py
 * cd c9/../bin/python pyzmq.py
 * cd c9chatserver/ ../bin/python chat_server.py
+
+初始化
+=====================================
+
+1. createdb c9
+2. python data_service.py
+3. python back.py load
+4. python scripts/init.py
+
 
 
 其它
