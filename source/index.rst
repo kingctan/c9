@@ -13,12 +13,12 @@ Contents:
 
    intro
    quickstart
-   admin
-   base
-   sale
-   purchase
-   store
-   financial
+   admin/index
+   base/index
+   sale/index
+   purchase/index
+   store/index
+   financial/index
    repair
    report
    mobile
