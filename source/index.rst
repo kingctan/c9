@@ -13,6 +13,7 @@ Contents:
 
    intro
    quickstart
+   init
    admin/index
    base/index
    sale/index
@@ -24,7 +25,7 @@ Contents:
    mobile
    service
    aot
-   develop
+   develop/index
    changelog
    todo
 
