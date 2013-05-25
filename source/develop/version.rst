@@ -13,6 +13,7 @@
 * 帮助文档
 * 错误修正
 * c版本proxy
+* 全部使用cxfreeze重新打包
 
 .. rubric:: gevent的意义
 
