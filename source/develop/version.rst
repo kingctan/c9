@@ -13,7 +13,8 @@
 * 帮助文档
 * 错误修正
 * c版本proxy
-* 全部使用cxfreeze重新打包
+* 开始使用memcached 缓存服务
+* 全部使用cxfreeze重新打包 , windows 安装目录结构重新设计, 更容易安装
 
 .. rubric:: gevent的意义
 
@@ -29,7 +30,6 @@
 预计 6月中旬
 
 * 返修模块
-* 新的redis cache 服务
 * 将代码从bitbucket 转移到自己的gitlab服务器
 
 0.4
