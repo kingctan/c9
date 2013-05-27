@@ -1,17 +1,27 @@
 更新日志
 ------------------------
 
-*2013-5-23*
+.. rubric:: 2013-5-26
+
+* 移动刷新缓存到工具条
+* 增加memcached 支持
+* 登录下载缓存从memcached下载, 刷新缓存会清除memcached缓存,也就是现在刷新缓存会真正的起作用
+* 为一些模型定义增加passive_deletes=True 这样在删除时如果有引用则会提示错误
+
+
+.. rubric:: 2013-5-23
+
 * app_gevent 处理gevent异常
 * 增加区域时刷新整个列表
 
-*2013-5-22*
+.. rubric:: 2013-5-22
+
 
 * 新增角色时 不显示角色用户和权限
 * 删除角色时检查user_roles表
 * 角色名称唯一性设置，通过对字段name设置unique=True
 
-*2013-5-16*
+.. rubric:: 2013-5-16
 
 1. 现在可以在model.save falure 回调中在operation中使用responseText了
 2. 用户现在检查name/employee_id, 检查name唯一性，ad_name 绑定唯一性

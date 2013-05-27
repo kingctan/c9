@@ -33,6 +33,16 @@ C9 有类似outlook的界面，
 
 通常用于刷新记录
 
+.. image:: /images/application_add.png
+	:align: left
+
+通常用于添加明细记录
+
+.. image:: /images/application_add.png
+	:align: left
+
+通常用于删除明细记录
+
 通常单据流程
 ^^^^^^^^^^^^^^^^^^^^^^^
 

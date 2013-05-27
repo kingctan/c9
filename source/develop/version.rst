@@ -5,25 +5,33 @@
 ===============================
 预计 5月底
 
-* extjs 4.2
+* extjs 4.2 视sencha 发布4.2.1的进程而定
 * 使用 gevent
 * 能运行在pypy下
-* 部署到linux
+* 继续尝试部署到linux
 * 使用router/dealer 模式， 扩展更容易
 * 帮助文档
 * 错误修正
 * c版本proxy
 * 开始使用memcached 缓存服务
-* 全部使用cxfreeze重新打包 , windows 安装目录结构重新设计, 更容易安装
+* 全部使用cxfreeze重新打包, 兼容windows/linux , windows 安装目录结构重新设计, 更容易安装
+
+.. rubric:: 缓存服务
+
+开始使用独立的memcached 服务,并开始通过memcached优化访问
+
+.. rubric:: 新的扩展方式
+
+当前的扩展方式需要同时增加一个c9webserver和一个pyzmq对, 但实际上web请求基本过剩,而应用服务可能会不足, 新的扩展方式引入一个proxy, c9webserver和应用服务均通过proxy通讯,结果就是无论是c9webserver和应用服务都可以自由的增加和减少节点, 并且也可以是动态的增加和减少
 
 .. rubric:: gevent的意义
 
-* zmq的req/rep模式没有超时功能，利用gevent可解决此问题
+* zmq的req/rep模式没有超时功能，利用gevent可解决此问题, 新版本设置一个最大执行时间,比方说8秒, 超过该时间自动停止请求,避免长时间的阻塞一个进程
 * 某些任务无需返回，可以直接扔给gevent, 如发送邮件
 
 .. rubric:: pypy的意义
 
-* 性能
+* 性能 为将来迁移做准备
 
 0.3
 ===============================

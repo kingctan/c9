@@ -6,17 +6,15 @@ linux 打包 部署
 
 从0.2 开始, linux可以同windows 一样使用cxfreeze打包, app_gevent/c9webserver在linux下不打包zmq/gevent,通过手动复制包进行
 
-sudo apt-get install memcached
-
-
 
 linux virutalenv部署
 ==================================
 
+* sh install_virtualenv.sh
+
 
 
 windows 部署
-
 ========================================
 
 .. rubric:: 目录结构
@@ -57,6 +55,7 @@ windows 部署
 * start_all.bat
 
 卸载也只需要
+
 * stop_all.bat
 * uninstall_service.bat
 
