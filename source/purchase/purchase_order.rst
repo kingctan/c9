@@ -109,4 +109,4 @@
 
 .. rubric:: 关于打印模板
 
-参考 :doc:`/sale/sale`
+参考 :doc:`/sale/sale_order`
