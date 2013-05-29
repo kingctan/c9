@@ -7,6 +7,7 @@
    version
    install
    deploy
+   ext
    javascript
    service
    note
