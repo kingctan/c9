@@ -9,6 +9,6 @@
    deploy
    aot
    ext
-   javascript
+   javascript/index
    service
    note
