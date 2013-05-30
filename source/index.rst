@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    intro
+   faq
    quickstart
    init
    admin/index
@@ -20,11 +21,10 @@ Contents:
    purchase/index
    store/index
    financial/index
-   repair
+   repair/index
    report/index
    mobile
    service
-   aot
    develop/index
    changelog
    todo

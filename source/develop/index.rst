@@ -7,6 +7,7 @@
    version
    install
    deploy
+   aot
    ext
    javascript
    service
