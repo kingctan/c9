@@ -12,6 +12,14 @@ BaseService
 .. rubric:: __init__(self, user, method, set_of_book)
 
 
+.. rubric:: action方法签名
+
+action 方法通常调用格式如下,如 /api/repairs?action=install::
+
+	def install(self, id=None, parmas=None):
+		pass
+
+		
 
 .. rubric:: delete(self, id) 方法
 

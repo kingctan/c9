@@ -49,7 +49,7 @@
 
 	EXTENSIONS: [{"package":"c9_repiar", "bootstrap": "/static/js/c9_repair/bootstrap.js"}]
 
-4. 创建security_keys/menu_items/menus, 创建工作流定义, 建议用脚本 todo 
+4. 创建security_keys/menu_items/menus(参考 https://github.com/jiangjianxiao/c9_repair/blob/master/c9_repair/services/repair.py install方法), 创建工作流定义:::
 
 
 客户端扩展
