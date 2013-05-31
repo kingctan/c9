@@ -13,6 +13,7 @@
 * 帮助文档
 * 错误修正
 * c版本proxy
+* 开始支持第三方扩展
 * 开始使用memcached 缓存服务
 * 全部使用cxfreeze重新打包, 兼容windows/linux , windows 安装目录结构重新设计, 更容易安装
 
@@ -38,6 +39,7 @@
 预计 6月中旬
 
 * 返修模块
+* 第三方扩展支持完备
 * 将代码从bitbucket 转移到自己的gitlab服务器
 
 0.4

@@ -7,6 +7,7 @@
    version
    install
    deploy
+   open_source
    aot
    ext
    javascript/index

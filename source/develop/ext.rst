@@ -49,7 +49,7 @@
 
 	EXTENSIONS: [{"package":"c9_repiar", "bootstrap": "/static/js/c9_repair/bootstrap.js"}]
 
-4. 创建security_keys/menu_items/menus(参考 https://github.com/jiangjianxiao/c9_repair/blob/master/c9_repair/services/repair.py install方法), 创建工作流定义:::
+4. 创建security_keys/menu_items/menus/工作流定义/创建数据表, 在你的服务类中创建install方法(参考 https://github.com/jiangjianxiao/c9_repair/blob/master/c9_repair/services/repair.py install方法) (todo, 系统将通过aot提供安装扩展和卸载扩展的功能)
 
 
 客户端扩展

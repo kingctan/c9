@@ -5,3 +5,4 @@ javascript
    :maxdepth: 2
    
    repair
+   windows
