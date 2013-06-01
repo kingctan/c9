@@ -51,6 +51,20 @@
 
 4. 创建security_keys/menu_items/menus/工作流定义/创建数据表, 在你的服务类中创建install方法(参考 https://github.com/jiangjianxiao/c9_repair/blob/master/c9_repair/services/repair.py install方法) (todo, 系统将通过aot提供安装扩展和卸载扩展的功能)
 
+.. rubric:: 工作台问题
+
+1. 将你的单据显示在工作台
+
+我的单据由 CommonService.my_forms 实现,该类提供一个类属性_my_forms,你可以在其中增加你自己的单据的访问方式(参考 https://github.com/jiangjianxiao/c9_repair/blob/master/c9_repair/services/repair.py extend_my_forms 方法)
+
+然后在包的__init__.py文件中注册::
+
+	from c9.services import CommonService
+	CommonService._my_forms += [extend_my_forms]
+	del extend_my_forms
+	del CommonService
+
+
 
 客户端扩展
 ===========================
@@ -77,7 +91,8 @@
 
 C9中存在两种表单实例,一种是singleton形式的, 一种表单类型只存在一个实例,这些实例存在于form_holder(global.js), 操作方法是open_form/new_form(common.js), 还有是每次都打开一个新实例,关闭时destroy , 操作方法是open_new_form(common.js)
 
- 当你新建一个表单时,需要向FORM_CLASS_MAP注册(建议你写在你的扩展的bootstrap.js文件中)::
+
+当你新建一个表单时,需要向FORM_CLASS_MAP注册(建议你写在你的扩展的bootstrap.js文件中)::
 
  	FORM_CLASS_MAP['repair'] = 'C9.form.RepairForm';
 
@@ -96,6 +111,11 @@ C9中存在两种表单实例,一种是singleton形式的, 一种表单类型只
 		});
 
 	}
+
+注册 form_name_display (不幸的是,他是小写的)::
+
+	form_name_display['repair'] = "返修单";
+
 
 发布你的扩展
 =============================
