@@ -86,6 +86,17 @@
 * 建立模块html文件
 * 通过注册的menu/menu_item访问
 
+将新建表单的功能放到工具条上
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+这取决于你的menu的name属性(todo 当前仅支持两级菜单,将取消这个限制)
+
+1. 增加你的菜单根节点(已存在sale/purchase/store/account)::
+
+ 	Ext.Array.insert(TOOLBAR_MODULES, 3, 'repair');
+
+.. image:: /images/c9_repair_ext_main_ui.png
+
 表单
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
