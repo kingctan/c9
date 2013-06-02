@@ -9,6 +9,23 @@
 BaseService
 ===============================
 
+
+读取关系
+========================
+
+对于类似/api/sale_orders/1/sale_order_lines 这样的请求,系统会向BaseService调用read_realtion方法
+
+read_relation(self, id, relation, relation_id, params=None)
+
+如果你的服务类提供了同名的方法如sale_order_lines 则系统会调用该方法,并传递 id, relation_id, params 参数 (relation当然不用)
+
+否则,系统根据id 获取记录,然后调用sale_order_lines属性
+
+如果同时提供relation_id, 则系统从sale_order_lines中取一个值 (这是没有效率的方式, 仅仅是补完的需要)
+
+
+
+
 .. rubric:: __init__(self, user, method, set_of_book)
 
 
