@@ -33,14 +33,14 @@
 		reamde.rst 说明文件
 
 
-2. 修改你的 packages.__init__.py 暴露服务类, 注册工作流::
+2. 修改你的 packages.__init__.py 暴露服务类, 注册工作流实例::
 
 	from .services.repair import RepairService
 
 	from .workflows.repair import RepairWorkflow
 
 	from c9 import settings
-	settings.WORKFLOW_FACTORY['repair'] = RepairWorkflow
+	settings.WORKFLOW_FACTORY['repair'] = RepairWorkflow()
 
 	del RepairWorkflow
 	del settings
@@ -82,7 +82,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 * 定义model, 少许的话可以直接在bootstrap.js中定义, 多的话建议另开一个文件
-* 有表单的话创建表单文件, 在bootstrap.js中载入并注册FORM_NEW_REC_MAP/FORM_CLASS_MAP, 参考下方
+* 有表单的话创建表单文件, 在bootstrap.js中载入并注册FORM_NEW_REC_MAP/FORM_CLASS_MAP/RESOURCE_MAP, 参考下方
 * 建立模块html文件
 * 通过注册的menu/menu_item访问
 
@@ -127,6 +127,10 @@ C9中存在两种表单实例,一种是singleton形式的, 一种表单类型只
 
 	form_name_display['repair'] = "返修单";
 
+注册 RESOURCE_MAP::
+
+	RESOURCE_MAP['Repair'] = 'repairs';
+
 
 发布你的扩展
 =============================
@@ -147,6 +151,12 @@ C9中存在两种表单实例,一种是singleton形式的, 一种表单类型只
 
 	mklink /D  c:\works\c92\c9\static\js\c9_repair c:\works\c92\c9_repair\static\js\app
 	mklink /D c:\works\c92\c9\templates\modules\repair c:\works\c92\c9_repair\templates\repair
+
+linux::
+
+	ln -s -f ~/works/c92/c9_repair/static/js/app/ c9_repair
+	ln -s -f ~/works/c92/c9_repair/templates/repair/ ~/works/c92/c9/templates/modules/repair
+
 
 
 python和javascript的猴子补丁

@@ -21,6 +21,11 @@
 * 在 c9 目录, python pyzmq.py
 * 在 c9chatserver目录, python chat_server.py
 
+
+..rubric:: tornado/pyzmq 版本 
+
+6.2 tornado 3.0.2 /from github source build pyzmq
+
 初始化
 =====================================
 
