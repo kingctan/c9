@@ -1,43 +1,43 @@
 部署
 -----------------------------------
 
-linux 打包 部署
-==========================================
+自 2013/6/7起,在所有平台均使用virtualenv发布形式, 放弃cx_freeze/py2exe之类的打包形式(除了windows下的nginx_service, 因为他依赖服务停止时发出-s stop命令)
 
-从0.2 开始, linux可以同windows 一样使用cxfreeze打包, app_gevent/c9webserver在linux下不打包zmq/gevent,通过手动复制包进行
-
-
-linux virutalenv部署
-==================================
-
-* sh install_virtualenv.sh
-
+部署根目录按c9+版本号形式,如 0.2 版本为c92, 0.3 版本为 c93, 以后类推
 
 
 windows 部署
 ========================================
 
+windows 下主要依赖srvany.exe来做windows services 管理
+
 .. rubric:: 目录结构
 
-* application_server - c9 application server,按进程数(从1开始) 分多个子目录
+
+* c9 - c9 application server
 * proxy - c9 proxy 服务
-* webserver - c9 webserver 按端口号分多个子目录,默认从8000开始
+* c9webserver - c9 webserver 
+* c9chatserver - 聊天服务 
 * fonts - 字体文件, pdf 打印时用
 * templates - 模板
 * static - 静态文件
-* nginx-1.4.1 - nginx
+* nginx-1.5.1 - nginx
 * certificate - 证书
-* chat_server - 聊天服务
 * pg_dump_service postgresl 备份服务
-* nginx_service nginx 服务
+* nginx_service - nginx 服务 , linux不需要
 * memcached-win32-1.4.4-14 
 * backup 备份目录
 * logs 日志目录
+* env virutalenv
+* conf 配置文件
 
-默认安装到c9盘
+
+nginx_service/proxy 各会占据一个console windows host进程
 
 
 .. rubric:: 需求
+
+* 安装python 2.7.4
 
 * 安装 postgresql 9.2
 
@@ -58,5 +58,10 @@ windows 部署
 
 * stop_all.bat
 * uninstall_service.bat
+* 删除c9[version] 目录
 
+.. rubric:: 分发
 
+1. 更新static/js/app/bootstrap.js VERSION
+2. 更新 c9/c9/settings.py VERSION
+3. 运行deply.sh/deply.bat

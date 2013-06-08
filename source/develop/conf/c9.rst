@@ -1,0 +1,59 @@
+c9 应用程序服务
+------------------------------------
+
+通常,会启动多个应用程序服务的实例,如果不使用LOG选项, 均可以使用同一配置文件, 为了让不同实例输出到不同的日志, 可以建立多个配置文件, 然后配置不同实例使用该配置文件(linux参考supervisor配置, windows 参考srvany.exe 相关配置)
+
+
+例子::
+
+	{
+	  "USE_AD": false,
+	  "LOG": {
+	    "log_file_prefix": "c:/works/c92/c9/app_gevent.log",
+	    "log_file_max_size": 0,
+	    "log_file_num_backups": 0,
+	    "logging": "DEBUG",
+	    "log_to_stderr": true
+	  },
+	  "PYZMQ_URL": "tcp://localhost:5557",
+	  "PYZMQ_ENDPOINT_TYPE": "connect",
+	  "FONT_PATH": "c:/works/c92/c9/fonts",
+	  "TEMPLATE_PATH": "c:/works/c92/c9/templates",
+	  "LDAP_SERVER": "ldaps://xxxx.xxxx.xxxx.xxxx",
+	  "LDAP_USER": "CN=ldap_user,OU=ERP,OU=xx,DC=xxxx,DC=cn",
+	  "LDAP_PASSWORD": "123456",
+	  "EXTENSIONS": [{"package": "c9_repair", "bootstrap":"/static/js/c9_reapir/bootstrap.js"}], 
+	  "SET_OF_BOOKS": {
+	    
+	    "c9": [
+	      "postgresql+psycopg2",
+	      "localhost",
+	      "c9",
+	      "postgres",
+	      "123456"
+	    ],
+	    "c92012": [
+	      "postgresql+psycopg2",
+	      "localhost",
+	      "c92012",
+	      "postgres",
+	      "123456"
+	    ]
+	  }
+
+	}
+
+
+配置项
+============================
+
+* USE_AD 是否集成ldap认证, 如果为true, 则LDAP_SERVER/LDAP_USER/LDAP_PASSWORD必须设定
+* LOG - 配置日志 null或dict
+* PYZMQ_URL/PYZMQ_ENDPOINT_TYPE zmq连接设置
+* FONT_PATH 字体文件路径, 绝对
+* TEMPLATE_PATH 模板文件路径, 绝对
+* SET_OF_BOOKS 账套设定, dict,  值是一个列表, 依次是连接方式/数据库服务器名或地址/数据库/登录用户和密码
+* EXTENSIONS 扩展定义, 列表,每个项是个dict
+* MEMCACHED 列表,每个项有ip:port 字符串组成,缺省 ['127.0.0.1:11211']
+* EXECUTION_TIME_OUT - 执行超时,默认4秒
+* CACHE_DUARTION 缓存条目生存时间, 缺省 30*60

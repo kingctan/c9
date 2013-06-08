@@ -7,6 +7,7 @@
    version
    install
    deploy
+   conf/index
    open_source
    aot
    ext

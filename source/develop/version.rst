@@ -8,14 +8,13 @@
 * extjs 4.2.1
 * 使用 gevent
 * 能运行在pypy下
-* 继续尝试部署到linux
 * 使用router/dealer 模式， 扩展更容易
 * 帮助文档
 * 错误修正
 * c版本proxy
 * 开始支持第三方扩展
 * 开始使用memcached 缓存服务
-* 全部使用cxfreeze重新打包, 兼容windows/linux , windows 安装目录结构重新设计, 更容易安装
+* 放弃py2exe/cx_freeze之类的打包方案, 使用virutalenv方案进行分发, windows/linux使用类似部署方式
 
 .. rubric:: 缓存服务
 

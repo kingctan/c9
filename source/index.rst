@@ -15,6 +15,7 @@ Contents:
    faq
    quickstart
    init
+   workbench
    admin/index
    base/index
    sale/index

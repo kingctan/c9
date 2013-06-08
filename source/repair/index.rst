@@ -7,6 +7,7 @@
     workflow   
     repair
     test
-    report
+    back_scrap
+    report/index
     
   
