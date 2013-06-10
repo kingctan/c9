@@ -28,6 +28,7 @@ read_relation(self, id, relation, relation_id, params=None)
 
 .. rubric:: __init__(self, user, method, set_of_book)
 
+构造函数
 
 .. rubric:: action方法签名
 
@@ -36,7 +37,31 @@ action 方法通常调用格式如下,如 /api/repairs?action=install::
 	def install(self, id=None, parmas=None):
 		pass
 
-		
+.. rubric:: update(self, id, params) 方法		
+
+_update(self, session, upd, params)
+
+可以覆盖该方法, 该方法session.add前执行, 过程
+
+1. 更新upd属性
+2. 设置updated_at,updated_user
+3. 更新help_code,如果存在
+4. 如果有保存方法,调用model.save
+
+
+.. rubric:: create(self, params) 方法
+
+_create(self, session, ins, params)
+
+ 可以覆盖该方法,该方法逻辑
+
+1. 更新ins属性
+2. 设置created_at,created_user
+3. 更新help_code,如果存在
+4. 如果有保存方法,调用model.save
+
+
+
 
 .. rubric:: delete(self, id) 方法
 
