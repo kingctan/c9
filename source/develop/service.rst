@@ -26,6 +26,19 @@ read_relation(self, id, relation, relation_id, params=None)
 
 
 
+.. rubric:: read_id(self, id=None, params=None)
+
+读取类似/api/sale_orders/1
+
+1. _read_id_q(self, session, id, params)
+2. _read_q(self, session)
+3. _read(q)
+4. filter_by(id=id)
+
+
+
+
+
 .. rubric:: __init__(self, user, method, set_of_book)
 
 构造函数
