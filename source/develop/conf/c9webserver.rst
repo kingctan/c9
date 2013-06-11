@@ -39,3 +39,5 @@ c9 web server
 * RELEASE  - 不使用
 * DEFAULT_SET_OF_BOOK 缺省账套
 * SET_OF_BOOKS 账套列表, 每个项是个dict , name 对应 :doc:`c9`中的SET_OF_BOOK的key, text是该账套描述, status是表示账套是否处理启用或关闭状态
+* COOKIE_SECRET - cookie 加密串 必须同c9chatserver.json配置一致, 用scripts/cookie_secret.py可生成
+
