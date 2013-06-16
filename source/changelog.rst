@@ -8,7 +8,9 @@
 
 * 销售收款/采购付款选择 检查框直接 可见 可点击
 * 调整应收报表排序
-* 修理并发的delete操作会导致webserver没有响应的问题
+* fix并发的delete操作会导致webserver没有响应的问题
+* fix tree node 删除出错但node仍被移除问题，修正所有相关功能，如科目，地区，货品类型，安全键，菜单等
+* fix 科目创建typo
 
 .. rubric:: 2013-6-15
 
