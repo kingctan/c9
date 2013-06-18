@@ -6,6 +6,24 @@
 
 c9 允许从客户端发起查询， 可以使用model__field__查询条件，其中model__部分通常不使用，一般就是field__查询条件, 如name__contains, 如果需要通过or查询多个字段, 可使用如下模式 name__contains__or__ad_name__contains__or__help_code__contains
 
+如果url中出现了类似/api/users?approve=&name__contains__or__help_code_contains的请求，对于approve的处理是个难题，不需要进行approve的查询或是approve为False, 这里, c9使用第一种的理解，忽略该参数.
+
+表达列表
+
+1. eq  等于
+2. neq 不等于
+3. isnull  is null
+4. nisnull is not null
+5. blank 等于空白
+6. nblank 不等于blank
+7. gt 大于
+8. gte 大于等于
+9. lt 小于
+10. lte 小于等于
+11. contains 包含
+12. startswith 开始于
+13. endswith 结束于
+
 缓存
 ============================
 
