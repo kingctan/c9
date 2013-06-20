@@ -6,8 +6,9 @@
 客户端扩展将支持
 
 * job
-* form
-* query
+* form - 窗体/表单
+* query - 查询
+* report - 报表
 
 当前,　c9 仅支持 job功能, 你可以在应用程序对象树 Jobs 中定义,删除,编辑,运行job
 
