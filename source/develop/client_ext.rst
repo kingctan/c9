@@ -130,3 +130,8 @@ workspace.showNode
 
 
 showNode遵循存在则活动该tab,不存在则创建的规则.
+
+model/store
+===========================
+
+数据访问主要通过model或store访问,查看 c9提供的model列表
