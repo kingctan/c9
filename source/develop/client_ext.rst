@@ -1,7 +1,7 @@
 客户端扩展
 ----------------------------
 
-与 :doc:`ext` 相比,　客户端扩展通过c9 界面进行,主要使用javascript, 调用预定义的功能完成,　如果不存在可调用的功能.　还是需要通过 :doc:`ext` 来完成
+与 :doc:`ext` 相比,　这里的客户端扩展专指通过c9 界面进行,主要使用javascript, 调用预定义的功能完成,　如果不存在可调用的功能.　还是需要通过 :doc:`ext` 来完成
 
 客户端扩展将支持
 
@@ -38,6 +38,45 @@ job 是一段javascript  脚本， 注意c9 最终会如下运行
 
 job可以在job界面中运行，也可以通过菜单项暴露， 从而指定给菜单调用， 当指定给菜单项时， uri 用 /jobs/job_name 的格式
 
+通过菜单项/菜单管理的job , c9会自动创建一个tab_菜单名的父panel, 你的代码应该是这样的
+
+.. code-block:: javascript
+
+	var root_pane = workspace.tabs.getComponent(id);
+	root_pane.add(你自己的panel);
+
+如果不借助于c9的体系,自行添加到workspace.tabs,需要使用不同的代码
+
+.. code-block:: javascript
+
+	var closable = true;
+	var id = 'tab_job_test';
+	// var t = tabs.getComponent(id);
+	// if (t) {
+	//   tabs.setActiveTab(t, closable);
+		
+	// } else{
+		
+	// 	main();
+	// }	
+	function main(){
+		// var panel = workspace.tabs.add({
+		// 	title: '部门',
+		// 	iconCls: 'application_form',
+		// 	itemId: id,
+		// 	closable: true,
+		// 	layout: 'fit',
+		// 	items: [grid]
+			
+		// 	});
+		
+		
+		// workspace.tabs.setActiveTab(panel);
+
+
+	}
+
+	
 startup job
 =============================
 
