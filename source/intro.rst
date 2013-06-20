@@ -25,7 +25,7 @@ C9的特点
 * 架构按大型web站点访问模式设计，分布式设计,前后端能自由伸缩.能应付客户不断增加的业务需求
 * 支持ldap
 * 将支持返修, 移动, 商城, tabao等子系统 (开发中)
-* 支持第三方 :doc:`/develop/ext`
+* 支持第三方 :doc:`/develop/ext` 和:doc:`/develop/client_ext`
 *  :doc:`/develop/open_source` 
 * 按月付费服务模式
 

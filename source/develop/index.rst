@@ -11,6 +11,7 @@
    open_source
    aot
    ext
+   client_ext
    javascript/index
    service
    note
