@@ -42,8 +42,8 @@ job可以在job界面中运行，也可以通过菜单项暴露， 从而指定�
 
 .. code-block:: javascript
 
-	var root_pane = workspace.tabs.getComponent(id);
-	root_pane.add(你自己的panel);
+	
+	parent_panel.add(你自己的panel); //parent_panel自动提供
 
 如果不借助于c9的体系,自行添加到workspace.tabs,需要使用不同的代码
 
