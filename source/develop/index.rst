@@ -8,6 +8,7 @@
    install
    deploy
    conf/index
+   run
    open_source
    aot
    ext
