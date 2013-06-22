@@ -104,6 +104,18 @@ workspace
 * accordion - Ext.panel.Panel
 * get_chat_window() - 获得聊天窗口
 
+.. rubric::  配置
+
+通过 workspace.config访问
+
+* START_MONTH
+* TOOLBAR_MODULES
+* FORM_NEW_REC_MAP
+* FORM_CLASS_MAP
+* RESOURCE_MAP
+* use_chat
+* get_resource(model)
+
 .. rubric:: 其他
 
 * user - 当前用户
@@ -120,7 +132,16 @@ workspace
 	workspace.open_form('allot', 1000) === form_holder.allot; //open_form是singleton的,所以是true
 
 
-表单有一定的范式, 如form,form2,form_tab, line_tab, line_grid, action_grid
+表单有一定的范式, 如
+* form 如果存在一个form
+* form2 如果存在第二个form
+* form_tab 当存在多个form时 用form_tab组织两个form
+* line_tab 组织line_grid和action_grid
+* line_grid 明细行
+* line_gird2 如果存在第二个明细行
+* action_grid 表单活动行
+* workflow 工作流面板 C9.workflow.ExecutePanel 实例
+
 
 workspace.tabs
 ===================
