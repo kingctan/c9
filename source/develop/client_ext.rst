@@ -94,7 +94,7 @@ startup job
 workspace
 =================================
 
-未来, 大部分全局变量均将集中到一个 workspace 变量中，你可以通过workspace变量引用大部分c9 元素. 抱歉，现在还存在两种命名形式
+未来, 大部分全局变量均将集中到一个 workspace 变量中，你可以通过workspace变量引用大部分c9 元素. 抱歉，现在还存在两种命名形式, 并且对常量命名也没有规范
 
 .. rubric:: 界面类
 
@@ -104,20 +104,37 @@ workspace
 * accordion - Ext.panel.Panel
 * get_chat_window() - 获得聊天窗口
 
-.. rubric::  配置
+.. rubric:: settings 全局设定
 
-通过 workspace.config访问
+* workspace.settings.use_chat workspace.settings.use_chat 是否使用聊天功能
+* workspace.settings.START_MONTH 默认月, 缺省为0, 表示当前
+* workspace.settings.get_start_date() help 函数
+* workspace.settings.get_end_date() help 函数
+* workspace.settings.TOOLBAR_MODULES  数组, 哪些菜单节点将放到工具条上
 
-* START_MONTH
-* TOOLBAR_MODULES
-* FORM_NEW_REC_MAP
-* FORM_CLASS_MAP
-* RESOURCE_MAP
-* use_chat
-* get_resource(model)
+.. rubric::  目前为全局变量
+
+将有计划的迁移到workspace变量 todo
+
+
+* FORM_NEW_REC_MAP todo
+* FORM_CLASS_MAP todo
+* RESOURCE_MAP todo
+* get_resource(model) todo
+* is_new_record
+* node_destroy/destory_node
+* APPLICATION_CACHE
+* LOOKUP
+* baseenum store/ renderer方法
+
+
+
 
 .. rubric:: 其他
 
+* SET_OF_BOOK - 当前账套 model 提供apply_status, is_open两个方法, 前者用于改变传入对象的disabled 值
+* SET_OF_BOOK_STORE - 当前所有账套
+* user_preference - 用户存储用户设定
 * user - 当前用户
 * form_holder - 该变量持有单例的表单实例, 你可以使用form_holder.表单名访问表单对象，如果已经存在, 如form_holder.sale_order/form_hodler.purchase_order
 * open_form(form_name, form_id)  打开一个指定的表单(singleton)
@@ -133,6 +150,7 @@ workspace
 
 
 表单有一定的范式, 如
+
 * form 如果存在一个form
 * form2 如果存在第二个form
 * form_tab 当存在多个form时 用form_tab组织两个form

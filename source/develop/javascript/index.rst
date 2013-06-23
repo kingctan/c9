@@ -5,6 +5,7 @@ javascript
    :maxdepth: 2
    
    extjs
+   model
    form
    repair
    windows

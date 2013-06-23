@@ -82,10 +82,29 @@ _create(self, session, ins, params)
 
 _delete(self, session, ins)
 
-可以覆盖该方法，检查删除逻辑, 参考 RoleService的_delete方法, 该方法无需return::
+可以覆盖该方法，检查删除逻辑, 参考 RoleService的_delete方法, 该方法无需return
+
+.. code-block:: python
 
     def _delete(self, session, ins):
         user_role = session.query(UserRole).filter_by(role_id=ins.id).first()
         if user_role:
             raise Exception(u'该角色存在用户,为避免误操作, 请先移除用户再删除')
         super(RoleService, self)._delete(session, ins)
+
+
+分页
+================================
+
+默认服务会检查start和limit参数, 只有在start和limit均传递值的情况下, 才会自动调用分页功能
+
+其它时候, 服务不检查您的返回, 你需要自行判断是否分页,并返回不同的结果, 按extjs 的约定,如果是分页,则需要以如下格式返回
+
+.. code-block:: python
+
+    return {
+        "total": total,
+        "success": True,
+        "root": []
+    }
+
