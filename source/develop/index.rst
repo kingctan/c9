@@ -10,6 +10,7 @@
    conf/index
    run
    open_source
+   workflow
    aot
    ext
    client_ext
