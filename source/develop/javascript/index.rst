@@ -9,4 +9,5 @@ javascript
    form
    repair
    windows
+   mobile
    scripts
